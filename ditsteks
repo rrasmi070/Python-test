@@ -1,0 +1,55 @@
+T1=Employee
+id
+name
+m_id
+dept
+
+T2 = Department
+id
+name
+
+
+select id, name, collesc(m.name, Employee.name) as namger, Department.name from Employee left join Department on
+Employee.dept = Department.id and join;
+
+
+
+# def prime_num(num):
+#     for i in range(2, 9):
+#         if (num%i) ==0:
+#             # print(False)
+#             return False
+
+#     return True
+
+# num = int(input())
+# print(prime_num(num))
+
+# li = [2,4,6,23,55,62,99]
+# odd_num = 0
+# for i in li:
+#     if (i%2) != 0:
+#         odd_num = odd_num+i
+#     else:
+#         odd_num = odd_num-i
+# print(odd_num)
+
+val = 'kkktvvv'
+# 3k2t2v1k
+c = 1
+strs = ''
+flag = 0
+for i in range(1, len(val)):
+    if(val[i] == val[i-1] and i == len(val) - 1):
+        c = c + 1
+        strs += str(c)+val[i-1]
+        break
+    elif val[i] == val[i-1]:
+        c+=1
+    else:
+        strs += str(c)+val[i-1]
+        c = 1
+        if i == len(val) - 1:
+            strs += str(c)+val[i]
+# strs = strs+str(c)+val[len(val)-1]
+print(strs)
